@@ -24,16 +24,23 @@ namespace WaffleSupplier.HostedServices
         {
             while (stoppingToken.IsCancellationRequested == false)
             {
-                var currentSupply = await _waffleSupplyClient.GetWaffleSupply();
-                if (currentSupply.CurrentSupplyOfWaffles > 100)
+                try
                 {
-                    _logger.Information("Our waffle supply is too large! No need to make more");
-                    await Task.Delay(TimeSpan.FromSeconds(2), stoppingToken);
-                    continue;
+                    var currentSupply = await _waffleSupplyClient.GetWaffleSupply(stoppingToken);
+                    if (currentSupply.CurrentSupplyOfWaffles > 100)
+                    {
+                        _logger.Information("Our waffle supply is too large! No need to make more");
+                        await Task.Delay(TimeSpan.FromSeconds(2), stoppingToken);
+                        continue;
+                    }
+
+                    _logger.Information("Making waffles");
+                    await _waffleSupplyClient.AdjustWaffleSupply(20, stoppingToken);
                 }
-                
-                _logger.Information("Making waffles");
-                await _waffleSupplyClient.AdjustWaffleSupply(20, stoppingToken);
+                catch (WaffleSupplyException)
+                {
+                    _logger.Information("Oh no, we can't deliever our waffles to our supply");
+                }
             }
         }
     }

@@ -27,9 +27,22 @@ namespace WaffleSupplier.HostedServices
             while (stoppingToken.IsCancellationRequested == false)
             {
                 _logger.Information("Quickly eat your waffles, before they decay!");
-                await _waffleSupplyClient.AdjustWaffleSupply(-10, stoppingToken);
+
+                await AdjustWaffleSupply(-10, stoppingToken);
 
                 await Task.Delay(DecayTime, stoppingToken);
+            }
+        }
+
+        private async Task AdjustWaffleSupply(int adjustmentAmount, CancellationToken stoppingToken)
+        {
+            try
+            {
+                await _waffleSupplyClient.AdjustWaffleSupply(adjustmentAmount, stoppingToken);
+            }
+            catch (WaffleSupplyException)
+            {
+                _logger.Information("Score! Decay couldnt get to the waffles!");
             }
         }
     }
