@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Serilog;
-using WaffleSupply.HostedServices;
 using WaffleSupply.Persistence.WaffleSupply;
 
 namespace WaffleSupply.Extensions
@@ -12,8 +11,6 @@ namespace WaffleSupply.Extensions
             serviceCollection
                 .AddSerilog()
                 .AddSingleton<IWaffleSupplyRepository, InMemoryWaffleSupplyRepository>();
-
-            serviceCollection.AddHostedService<EvilWaffleDecayService>();
 
             return serviceCollection;
         }

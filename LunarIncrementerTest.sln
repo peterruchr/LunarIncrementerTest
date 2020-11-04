@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaffleSupply.UnitTests", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaffleSupply.AcceptanceTests", "WaffleSupply.AcceptanceTests\WaffleSupply.AcceptanceTests.csproj", "{5F759A45-2EC3-4444-8C7F-92ADC2877CA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaffleSupplier", "WaffleSupplier\WaffleSupplier.csproj", "{0EF23542-48FC-4FEC-8BEE-60F737702DCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{5F759A45-2EC3-4444-8C7F-92ADC2877CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F759A45-2EC3-4444-8C7F-92ADC2877CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F759A45-2EC3-4444-8C7F-92ADC2877CA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EF23542-48FC-4FEC-8BEE-60F737702DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EF23542-48FC-4FEC-8BEE-60F737702DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EF23542-48FC-4FEC-8BEE-60F737702DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF23542-48FC-4FEC-8BEE-60F737702DCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

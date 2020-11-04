@@ -3,22 +3,22 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using WaffleSupply.Persistence.WaffleSupply;
+using WaffleSupplier.SupplyClient;
 
-namespace WaffleSupply.HostedServices
+namespace WaffleSupplier.HostedServices
 {
     public class EvilWaffleDecayService : BackgroundService
     {
-        private static readonly TimeSpan DecayTime = TimeSpan.FromSeconds(10);
+        private static readonly TimeSpan DecayTime = TimeSpan.FromSeconds(2);
         
-        private readonly IWaffleSupplyRepository _waffleSupplyRepository;
+        private readonly IWaffleSupplyClient _waffleSupplyClient;
         private readonly ILogger _logger;
 
         public EvilWaffleDecayService(
-            IWaffleSupplyRepository waffleSupplyRepository,
+            IWaffleSupplyClient waffleSupplyClient,
             ILogger logger)
         {
-            _waffleSupplyRepository = waffleSupplyRepository;
+            _waffleSupplyClient = waffleSupplyClient;
             _logger = logger;
         }
         
@@ -26,8 +26,8 @@ namespace WaffleSupply.HostedServices
         {
             while (stoppingToken.IsCancellationRequested == false)
             {
-                _logger.Information("Quickly eat your waffles! Before time claims them!");
-                await _waffleSupplyRepository.AdjustWaffleSupply(new WaffleSupplyAdjustmentRequest(-1));
+                _logger.Information("Quickly eat your waffles, before they decay!");
+                await _waffleSupplyClient.AdjustWaffleSupply(-10, stoppingToken);
 
                 await Task.Delay(DecayTime, stoppingToken);
             }
