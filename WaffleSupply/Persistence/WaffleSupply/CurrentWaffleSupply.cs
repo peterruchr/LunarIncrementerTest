@@ -2,11 +2,11 @@
 {
     public class CurrentWaffleSupply
     {
-        public CurrentWaffleSupply(int currentSupplyOfWarmWaffles)
+        public CurrentWaffleSupply(int currentSupplyOfWaffles)
         {
-            CurrentSupplyOfWarmWaffles = currentSupplyOfWarmWaffles;
+            CurrentSupplyOfWaffles = currentSupplyOfWaffles;
         }
 
-        public int CurrentSupplyOfWarmWaffles { get; }
+        public int CurrentSupplyOfWaffles { get; }
     }
 }

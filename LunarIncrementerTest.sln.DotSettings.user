@@ -1,0 +1,14 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9fb3530f_002D8698_002D46ed_002Dafa5_002D52f19e85fb6f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;And&gt;&#xD;
+    &lt;Project Location="C:\repo\LunarIncrementerTest\WaffleSupply.AcceptanceTests" Presentation="&amp;lt;WaffleSupply.AcceptanceTests&amp;gt;" /&gt;&#xD;
+    &lt;Namespace&gt;WaffleSupply.AcceptanceTests.TestScenarios&lt;/Namespace&gt;&#xD;
+  &lt;/And&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d6204900_002Dfbce_002D4bfe_002D9bd9_002D69adc0344225/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Return_Zero_Warm_Waffles_As_Default" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::A68D6B00-629F-4BB0-9BDE-D55636F8E920::.NETCoreApp,Version=v3.1::WaffleSupply.UnitTests.Persistence.WaffleSupply.InMemoryWaffleSupplyRepository_Should.Return_Zero_Warm_Waffles_As_Default&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

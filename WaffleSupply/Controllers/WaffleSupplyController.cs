@@ -6,7 +6,7 @@ using WaffleSupply.Persistence.WaffleSupply;
 namespace WaffleSupply.Controllers
 {
     [ApiController]
-    [Route("api/1/waffle-supplies")]
+    [Route("api/v1/waffle-supplies")]
     public class WaffleSupplyController : ControllerBase
     {
         private readonly IWaffleSupplyRepository _waffleSupplyRepository;
@@ -18,9 +18,9 @@ namespace WaffleSupply.Controllers
         
         [HttpPost]
         public async Task<IActionResult> AdjustWarmWaffleSupply(
-            AdjustWarmWaffleSupplyRequest adjustWarmWaffleSupplyRequest)
+            [FromBody] AdjustWaffleSupplyRequest adjustWaffleSupplyRequest)
         {
-            var persistentAdjustmentRequest = new WaffleSupplyAdjustmentRequest(adjustWarmWaffleSupplyRequest.WaffleAdjustment);
+            var persistentAdjustmentRequest = new WaffleSupplyAdjustmentRequest(adjustWaffleSupplyRequest.WaffleAdjustment);
 
             await _waffleSupplyRepository.AdjustWaffleSupply(persistentAdjustmentRequest);
 
@@ -28,7 +28,7 @@ namespace WaffleSupply.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetNumberOfWarmWaffles()
+        public async Task<IActionResult> GetWaffleSupply()
         {
             var currentWaffleSupply = await _waffleSupplyRepository.GetCurrentWaffleSupply();
 

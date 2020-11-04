@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaffleSupply", "WaffleSupply\WaffleSupply.csproj", "{05519C1B-71E1-417A-BD0B-E13D59C3CDA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaffleSupply.UnitTests", "WaffleSupply.UnitTests\WaffleSupply.UnitTests.csproj", "{A68D6B00-629F-4BB0-9BDE-D55636F8E920}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaffleSupply.AcceptanceTests", "WaffleSupply.AcceptanceTests\WaffleSupply.AcceptanceTests.csproj", "{5F759A45-2EC3-4444-8C7F-92ADC2877CA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{05519C1B-71E1-417A-BD0B-E13D59C3CDA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05519C1B-71E1-417A-BD0B-E13D59C3CDA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05519C1B-71E1-417A-BD0B-E13D59C3CDA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A68D6B00-629F-4BB0-9BDE-D55636F8E920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A68D6B00-629F-4BB0-9BDE-D55636F8E920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A68D6B00-629F-4BB0-9BDE-D55636F8E920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A68D6B00-629F-4BB0-9BDE-D55636F8E920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F759A45-2EC3-4444-8C7F-92ADC2877CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F759A45-2EC3-4444-8C7F-92ADC2877CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F759A45-2EC3-4444-8C7F-92ADC2877CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F759A45-2EC3-4444-8C7F-92ADC2877CA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -3,7 +3,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using WaffleSupply.Persistence;
 using WaffleSupply.Persistence.WaffleSupply;
 
 namespace WaffleSupply.HostedServices
